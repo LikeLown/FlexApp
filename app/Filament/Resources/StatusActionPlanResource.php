@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ActionPlanStatusResource\Pages;
-use App\Filament\Resources\ActionPlanStatusResource\RelationManagers;
-use App\Models\ActionPlanStatus;
+use App\Filament\Resources\StatusActionPlanResource\Pages;
+use App\Filament\Resources\StatusActionPlanResource\RelationManagers;
+use App\Models\StatusActionPlan;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -15,10 +15,10 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ActionPlanStatusResource extends Resource
+class StatusActionPlanResource extends Resource
 {
-    protected static ?string $model = ActionPlanStatus::class;
-    protected static ?string $label = 'Statut des actions';
+    protected static ?string $model = StatusActionPlan::class;
+protected static ?string $label = 'Statut des actions';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
@@ -36,7 +36,7 @@ class ActionPlanStatusResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('title')->label('Nom')
+                 TextColumn::make('title')->label('Nom')
             ])
             ->filters([
                 //
@@ -64,9 +64,9 @@ class ActionPlanStatusResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListActionPlanStatuses::route('/'),
-            'create' => Pages\CreateActionPlanStatus::route('/create'),
-            'edit' => Pages\EditActionPlanStatus::route('/{record}/edit'),
+            'index' => Pages\ListStatusActionPlans::route('/'),
+            'create' => Pages\CreateStatusActionPlan::route('/create'),
+            'edit' => Pages\EditStatusActionPlan::route('/{record}/edit'),
         ];
     }    
 }

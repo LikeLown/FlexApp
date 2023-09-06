@@ -1,13 +1,19 @@
-import preset from "./vendor/filament/support/tailwind.config.preset";
+import defaultTheme from "tailwindcss/defaultTheme";
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
 
+/** @type {import('tailwindcss').Config} */
 export default {
-    presets: [preset],
     content: [
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+        "./vendor/laravel/jetstream/**/*.blade.php",
+        "./storage/framework/views/*.php",
+        "./resources/views/**/*.blade.php",
         "./app/Filament/**/*.php",
         "./resources/views/**/*.blade.php",
         "./vendor/filament/**/*.blade.php",
     ],
-    plugins: [require("daisyui")],
+
     theme: {
         extend: {
             fontFamily: {
@@ -16,15 +22,16 @@ export default {
         },
     },
 
+    plugins: [forms, typography, require("daisyui")],
     daisyui: {
         themes: [
             {
                 equans: {
-                    ...require("daisyui/src/theming/themes")[
-                        "[data-theme=light]"
-                    ],
                     primary: "#002439",
                     secondary: "#70BD95",
+                    accent: "#FF9600",
+                    neutral: "#171d14",
+                    "base-100": "#ffffff",
                 },
             },
             "dark",

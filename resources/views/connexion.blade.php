@@ -12,44 +12,21 @@
                 <form action="#" class=" flex flex-col space-y-6">
                     <Label>
                         <span>Email</span>
-                        <input class=" input-md h-11 input input-bordered w-full pb-1" autocomplete="username"
-                            bind:value={loginValues.email} on:keypress={(e)=> {
-                        if (e.key == 'Enter') {
-                        e.preventDefault();
-                        submitHandler;
-                        }
-                        }}
-                        placeholder="prenom.nom@eiffage.com"
-                        type="email"
-                        />
-                        <Error bind:errors field={'email'} />
+                        <input class=" input-md  input input-bordered w-full pt-1" autocomplete="username"
+                            placeholder="prenom.nom@domaine.com" type="email" />
+
                     </Label>
 
                     <Label>
                         <span>Votre mot de passe</span>
-                        <input class=" input-md h-11 input input-bordered w-full pb-1" autocomplete="current-password"
-                            bind:value={loginValues.password} on:keypress={(e)=> {
-                        if (e.key == 'Enter') {
-                        e.preventDefault();
-                        submitHandler();
-                        }
-                        }}
-                        placeholder="*********"
-                        type="password"
-                        />
-                        <Error bind:errors field={'password'} />
+                        <input class=" input-md  input input-bordered w-full pb-1" autocomplete="current-password"
+                            placeholder="*********" type="password" />
+
                     </Label>
 
-                    <button class="btn btn-primary" color="red" on:click={()=> submitHandler()}>
-                        {#if waitFunction}
-      <span class="loading loading-spinner" />
-      Chargement ...
-     {:else}
-      Connexion
-     {/if}
-    </button>
-   </form>
-  </div>
- </div>
-</div>
+                    <button class="btn btn-primary" color="red"> Connexion </button>
+                </form>
+            </div>
+        </div>
+    </div>
 </x-app-layout>

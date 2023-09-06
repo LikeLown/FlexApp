@@ -6,6 +6,7 @@
         <html data-theme="equans">
 
         </html>
+        <link href="/BAHNSCHRIFT.woff2" rel="stylesheet">
         <meta name="application-name" content="{{ config('app.name') }}">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +23,7 @@
         @vite('resources/css/app.css')
     </head>
 
-    <body class="antialiased">
+    <body class="antialiased ">
         {{ $slot }}
 
         @filamentScripts

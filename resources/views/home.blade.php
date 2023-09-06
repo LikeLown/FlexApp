@@ -79,7 +79,7 @@
                         <h2 tabindex="0"
                             class="focus:outline-none text-lg font-semibold leading-tight text-accent-content ">
                             Accès multiplateforme</h2>
-                        <p tabindex="0" class="focus:outline-none text-base  leading-normal pt-2">We
+                        <p tabindex="0" class="focus:outline-none text-base  leading-normal pt-2">
                             Accédez à cette application web depuis n'importe où !</p>
                     </div>
                 </div>
@@ -88,8 +88,8 @@
 
         <div class="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4
         "><button
-                class="btn btn-primary">Accès
-                utilisateur</button><button class="btn btn-secondary"><a
+                class="btn btn-primary"><a class="w-full h-full text-center items-center flex" href="/connexion">Accès
+                    utilisateur</a></button><button class="btn btn-secondary"><a
                     class="w-full h-full text-center items-center flex" href="/admin">Accès
                     administrateur</a></button>
         </div>

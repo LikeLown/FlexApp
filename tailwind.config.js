@@ -8,6 +8,14 @@ export default {
         "./vendor/filament/**/*.blade.php",
     ],
     plugins: [require("daisyui")],
+    theme: {
+        extend: {
+            fontFamily: {
+                custom: ["Bahnschrift", "sans-serif"],
+            },
+        },
+    },
+
     daisyui: {
         themes: [
             {

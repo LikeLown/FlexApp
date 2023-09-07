@@ -78,7 +78,7 @@
                 <div class="mt-4" x-data="{}"
                     x-on:confirming-logout-other-browser-sessions.window="setTimeout(() => $refs.password.focus(), 250)">
                     <x-input type="password" class="mt-1 block w-3/4" autocomplete="current-password"
-                        placeholder="{{ __('PMot de passe') }}" x-ref="password" wire:model="password"
+                        placeholder="{{ __('Mot de passe') }}" x-ref="password" wire:model="password"
                         wire:keydown.enter="logoutOtherBrowserSessions" />
 
                     <x-input-error for="password" class="mt-2" />

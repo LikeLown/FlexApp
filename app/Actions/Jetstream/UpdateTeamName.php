@@ -20,7 +20,9 @@ class UpdateTeamName implements UpdatesTeamNames
         Gate::forUser($user)->authorize('update', $team);
 
         Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255']
+        ],[
+            'name.required' => __('Le nom de l\'équipe est obligatoire.'),
         ])->validateWithBag('updateTeamName');
 
         $team->forceFill([

@@ -5,9 +5,7 @@
         <div role="contentinfo" class="flex items-center flex-col px-4">
             <p tabindex="0" class="focus:outline-none uppercase text-sm text-center text-base-content leading-4">
                 En quelques minutes vous pouvez ....</p>
-            <hh1 tabindex="0"
-                class="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-accent-content lg:w-5/12 md:w-9/12 pt-4">
-                FlexApp</hh1>
+
         </div>
         <div tabindex="0" aria-label="group of cards"
             class="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4">

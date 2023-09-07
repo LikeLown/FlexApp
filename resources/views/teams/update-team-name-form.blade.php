@@ -10,7 +10,7 @@
     <x-slot name="form">
         <!-- Team Owner Information -->
         <div class="col-span-6">
-            <x-label value="{{ __('Propriétaire de l\'équipe') }}" />
+            <x-label value="Propriétaire de l'équipe" />
 
             <div class="flex items-center mt-2">
                 <img class="w-12 h-12 rounded-full object-cover" src="{{ $team->owner->profile_photo_url }}"
@@ -25,7 +25,7 @@
 
         <!-- Team Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="name" value="{{ __('Nom de l\'équipe') }}" />
+            <x-label for="name" value="Nom de l'équipe" />
 
             <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name"
                 :disabled="!Gate::check('update', $team)" />

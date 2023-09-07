@@ -5,12 +5,12 @@
         </h2>
     </x-slot>
 
-    <form method="POST" action="{{ route('bookings.store') }}" class="max-w-7xl mx-auto sm:px-6 px-1 lg:px-8 space-y-6">
-
+    <form class="max-w-7xl mx-auto sm:px-6 px-1 lg:px-8 space-y-6" method="POST" action="{{ route('bookings.store') }}">
         @csrf
 
-
-
+        <x-filament::input.wrapper>
+            <x-filament::input type="text" wire:model="name" />
+        </x-filament::input.wrapper>
 
 
         <x-button>{{ __('Sauvegarder') }}</x-button>

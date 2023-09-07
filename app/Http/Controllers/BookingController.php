@@ -21,20 +21,19 @@ class BookingController extends Controller
         return view('bookings.index',['bookings' => $bookings]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
-    {
-         return view('bookings.create');
+    {   
+        return view('bookings.create');
     }
+
+    
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

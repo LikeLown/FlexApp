@@ -1,4 +1,3 @@
-import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 import typography from "@tailwindcss/typography";
 
@@ -13,7 +12,6 @@ export default {
         "./resources/views/**/*.blade.php",
         "./vendor/filament/**/*.blade.php",
     ],
-
     theme: {
         extend: {
             fontFamily: {
